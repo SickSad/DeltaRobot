@@ -1,0 +1,22 @@
+------------------------------------------------------------------------------
+README
+------------------------------------------------------------------------------
+This firmware provides a G-Code over serial interface to a delta robot based 3D printer.
+It is designed to run on the STM32F4 Discovery.
+
+Build requirements:
+Arm Toolchain     - https://launchpad.net/gcc-arm-embedded
+libopencm3        - https://github.com/libopencm3/libopencm3
+stlink flash tool -https://github.com/texane/stlink
+
+The USB communication code is based pretty much entirley on the example code in the libopencm3 project for implementing a USB CDC-ACM device. The original code can be found here:
+https://github.com/libopencm3/libopencm3-examples
+
+
+
+With a little extra work (mainly re-implementing harware.c & hardware.h) this firmware could be ported over to another microcontroler. But bear in mind the firmware as it currently stands makes liberal use of floating points so a dedicated floating point unit is adivsed.
+
+
+
+
+
